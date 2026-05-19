@@ -70,7 +70,7 @@ export default async function BookPage({ params }: { params: { id: string } }) {
             <p className="text-sm text-gray-500 leading-relaxed mb-4">{desc}</p>
             {subjects.length > 0 && (
               <div className="flex flex-wrap gap-1.5">
-                {subjects.map(s => (
+                {subjects.map((s: string) => (
                   <span key={s} className="bg-gray-50 border border-gray-100 rounded-full px-3 py-1 text-[11px] text-gray-500">{s}</span>
                 ))}
               </div>
