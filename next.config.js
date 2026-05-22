@@ -3,11 +3,8 @@ const nextConfig = {
   images: {
     domains: ['covers.openlibrary.org'],
   },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.externals.push('@prisma/client')
-    }
-    return config
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'bcryptjs'],
   },
 }
 
